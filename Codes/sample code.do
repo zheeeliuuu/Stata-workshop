@@ -2,17 +2,19 @@
 					* CSSCR Workshop *
 					* Intro to Stata *
 
-					* by Zhe Liu, Jan 2021
+					* by Zhe Liu, July 2021
 *========================================================
 * help files
 help contents data management
 
 help import
+
+* change work directory
+cd "/Users/zl/OneDrive - UW/CSSCR/Stata_ Zhe_workshop"
+
 *===========================
 * importing data
 *==========================
-* change work directory
-cd "/Users/zl/OneDrive - UW/CSSCR/Stata_ Zhe_workshop"
 
 * read from hard drive
 use hs0.dta, clear
@@ -100,6 +102,9 @@ ttest read, by(gender)
 
 * paired 
 ttest read == write
+
+* correlation
+corr read write math science socst
 
 * linear regression of write on predictor math and categorical predictor prog
 regress write math i.prog
